@@ -3,9 +3,7 @@ const zod = require('zod');
 const userSchema=zod.string().min(2);
 const passSchema=zod.string().min(8);
 const nameSchema=zod.string().min(2);
-const mobileSchema=zod.number().max(10);
-const rollSchema=zod.number().max(8);
-const teacherIdSchema=zod.string().max(6);
+
 
 const adminTypeValidation=(req,res,next)=>{
     const username=req.body.username;
