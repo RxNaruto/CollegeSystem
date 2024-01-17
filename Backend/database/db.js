@@ -24,12 +24,21 @@ const teacher = new mongoose.Schema({
     mobile: Number
 })
 
+const branch = new mongoose.Schema({
+    name: String,
+    subjects: Object,
+    
+
+})
+
 const Admin= mongoose.model('Admin',admin);
 const Teacher= mongoose.model('Teacher',teacher);
 const Students=mongoose.model('Students',student);
+const Branch=mongoose.model('Branch',branch);
 
 module.exports={
     Admin,
     Teacher,
-    Students
+    Students,
+    Branch
 }
